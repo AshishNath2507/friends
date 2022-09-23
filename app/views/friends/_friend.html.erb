@@ -1,0 +1,21 @@
+<div id="<%= dom_id friend %>">
+
+<div class="card text-left">
+  <div class="card-header text-muted">
+    Friend Details
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">
+      <%= friend.first_name %>
+      <%= friend.last_name %>
+    </h5>
+    <p><%= friend.email %> | <%= friend.phone %> | <%= friend.twitter %></p>
+   
+    <%= link_to "Back", friends_path, class: "btn btn-secondary" %>
+    <%= link_to "Edit", edit_friend_path(@friend), class: "btn btn-dark" %> 
+  </div>
+  <div class="card-footer text-muted">
+    <%= friend.created_at %>
+  </div>
+</div>
+
